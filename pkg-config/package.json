@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "cw-site-assets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library for pulling Cloudflare Workers Site assets from the site KV based on local path.",
   "main": "index.js",
   "scripts": {
