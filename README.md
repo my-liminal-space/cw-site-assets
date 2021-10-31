@@ -3,7 +3,14 @@
 ## Introduction
 
 Access arbitrary site assets from a Cloudflare Workers Site. Helps you 
-dynamically determin which page to return for a given user request.
+dynamically control (using Workers hosted code) which "page" (from the pages 
+published in your site) to return for a given user request, for example by 
+returning the contents of a "not authorised" page if the user issuing the 
+request has not logged in.
+
+This code was found to be useful as the default behaviour of Workers Site is 
+heavily oriented towards serving the originally requested page (and doesn't 
+make it easy to fetch a different page instead).
 
 The primary method is:
 
