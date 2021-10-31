@@ -10,5 +10,10 @@
   "author": "Andy Redhead <andy@far2gone.com>",
   "license": "MIT",
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "~0.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

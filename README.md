@@ -52,16 +52,9 @@ The code lives in [this GitHub repo](https://github.com/my-liminal-space/cw-site
 Testing code that depends upon features of the Cloudflare Workers Site platform 
 (such as the voodoo setup of __STATIC_CONTENT_MANIFEST and _STATIC_CONTENT) is 
 "interesting". In order to build confidence that the code will work as 
-expected, the approach taken is to test by deploying the lib along with a test 
-harness into a Cloudflare Workers Site.
-
-The test harness uses the built in 'assert' library to demonstrate that the 
-code works as intended.
-
-In the repo, the main library code is in the file 'check-jwt.js' and the test 
-harness is in file 'test.js' with package.json 'main' set to 'test.js'. The 
-tests can be deployed and run using the bash script 'run-test.sh' (tried on 
-Ubuntu 18).
+expected, the approach taken is to test by deploying the lib along with a [test 
+site](https://cf-site-assets.deaddodgeydigitaldeals.com/index.html) into Cloudflare Workers.
+The index.js file handles requests coming into the test site.
 
 If you want to replicate the test environment, you will need to modify 
 wrangler.toml to use your own values.
@@ -71,6 +64,6 @@ wrangler.toml to use your own values.
 
 When packaged for deployment (using pkg.sh), a new folder structure is created 
 that is sets up a package focussed on distribtion, which means:
- - only check-jwt.js is included (renamed as index.js)
+ - only cw-site-assets.js is included (renamed as index.js)
  - an alternative package.json is included, pointing to index.js
 
